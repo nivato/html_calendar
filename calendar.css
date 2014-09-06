@@ -69,7 +69,7 @@ div {
 	border-radius: 8px;
 }
 
-.month, .year {
+#month, #year {
 	display: inline-block;
 	vertical-align: middle;
 	width: 150px;
@@ -89,6 +89,7 @@ div {
 	vertical-align: middle;
 	width: 36px;
 	height: 42px;
+	cursor: pointer;
 }
 
 .arrow-left {
@@ -99,18 +100,18 @@ div {
 	margin-right: 20px;
 }
 
-.calendar-wrapper {
-	background: rgba(0, 107, 0, 0.2);
+.days-wrapper {
+	background: rgba(255, 0, 0, 0.2);
 	width: 600px;
-	min-height: 300px;
+	height: 48px;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
 	overflow: auto;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+	-webkit-border-radius: 8px 8px 0px 0px;
+	-moz-border-radius: 8px 8px 0px 0px;
+	border-radius: 8px 8px 0px 0px;
 }
 
 .day {
@@ -125,6 +126,20 @@ div {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+}
+
+.calendar-wrapper {
+	background: rgba(0, 107, 0, 0.2);
+	width: 600px;
+	min-height: 300px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	overflow: auto;
+	-webkit-border-radius: 0px 0px 8px 8px;
+	-moz-border-radius: 0px 0px 8px 8px;
+	border-radius: 0px 0px 8px 8px;
 }
 
 .date {
