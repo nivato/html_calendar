@@ -6,7 +6,9 @@ var NOW_YEAR, NOW_MONTH, NOW_DATE;
 
 function clearDateCells(){
 	for (var i = 0; i < DATE_CELLS.length; i++){
-		DATE_CELLS[i].innerHTML = '';
+		var cell = DATE_CELLS[i];
+		cell.setAttribute('class', 'date-empty');
+		cell.innerHTML = '';
 	}
 }
 
@@ -47,8 +49,18 @@ function fillInCalendar(year, month){
 	var numOfDays = getDaysInMonth(year, month);
 	var firstDayInWeek = getDayOfWeek(year, month, 1);
 	for (var i = 1; i <= numOfDays; i++){
-		DATE_CELLS[firstDayInWeek + i - 1].innerHTML = i;
+		var cell = DATE_CELLS[firstDayInWeek + i - 1];
+		if (isItToday(year, month, i)){
+			cell.setAttribute('class', 'date-today');
+		} else {
+			cell.setAttribute('class', 'date');
+		}
+		cell.innerHTML = i;
 	}
+}
+
+function isItToday(year, month, day){
+	return (year == NOW_YEAR) && (month == NOW_MONTH) && (day == NOW_DATE);
 }
 
 function nextMonth(){

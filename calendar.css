@@ -1,17 +1,17 @@
 html {
 	height: 100%;
 	/* IE10 Consumer Preview */ 
-	background-image: -ms-linear-gradient(left, #888888 0%, #FFFFFF 40%, #FFFFFF 60%, #888888 100%);
+	background-image: -ms-linear-gradient(left, #777777 0%, #EEEEEE 40%, #EEEEEE 60%, #777777 100%);
 	/* Mozilla Firefox */ 
-	background-image: -moz-linear-gradient(left, #888888 0%, #FFFFFF 40%, #FFFFFF 60%, #888888 100%);
+	background-image: -moz-linear-gradient(left, #777777 0%, #EEEEEE 40%, #EEEEEE 60%, #777777 100%);
 	/* Opera */ 
-	background-image: -o-linear-gradient(left, #888888 0%, #FFFFFF 40%, #FFFFFF 60%, #888888 100%);
+	background-image: -o-linear-gradient(left, #777777 0%, #EEEEEE 40%, #EEEEEE 60%, #777777 100%);
 	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #888888), color-stop(0.4, #FFFFFF), color-stop(0.6, #FFFFFF), color-stop(1, #888888));
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #777777), color-stop(0.4, #EEEEEE), color-stop(0.6, #EEEEEE), color-stop(1, #777777));
 	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-linear-gradient(left, #888888 0%, #FFFFFF 40%, #FFFFFF 60%, #888888 100%);
+	background-image: -webkit-linear-gradient(left, #777777 0%, #EEEEEE 40%, #EEEEEE 60%, #777777 100%);
 	/* W3C Markup, IE10 Release Preview */ 
-	background-image: linear-gradient(to right, #888888 0%, #FFFFFF 40%, #FFFFFF 60%, #888888 100%);
+	background-image: linear-gradient(to right, #777777 0%, #EEEEEE 40%, #EEEEEE 60%, #777777 100%);
 }
 
 body {
@@ -40,7 +40,7 @@ div {
 }
 
 .title {
-	background: rgba(0, 0, 50, 0.3); /*background: #006B00;*/
+	background: rgba(0, 0, 50, 0.3);
 	width: 600px;
 	height: 60px;
 	margin-top: 50px;
@@ -49,24 +49,24 @@ div {
 	line-height: 60px;
 	text-align: center;
 	font-size: 30px;
-	-webkit-border-radius:	8px;
-	-moz-border-radius:		8px;
-	border-radius:			8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:	4px;
+	border-radius: 4px;
 }
 
 .controls {
-	background: rgba(50, 0, 0, 0.3);
+	background: rgba(0, 0, 50, 0.3);
 	width: 600px;
 	height: 55px;
 	line-height: 55px;
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	overflow: auto;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 #month, #year {
@@ -78,10 +78,10 @@ div {
 	margin: 0px;
 	text-align: center;
 	font-size: 20px;
-	background: rgba(0, 107, 0, 0.2);
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	background: rgba(50, 0, 0, 0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .arrow-left, .arrow-right {
@@ -103,55 +103,86 @@ div {
 .days-wrapper {
 	background: rgba(255, 0, 0, 0.2);
 	width: 600px;
-	height: 48px;
-	margin-top: 10px;
+	height: 44px;
+	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
 	overflow: auto;
-	-webkit-border-radius: 8px 8px 0px 0px;
-	-moz-border-radius: 8px 8px 0px 0px;
-	border-radius: 8px 8px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
 }
 
 .day {
 	float: left;
-	width: 77px;
+	width: 81px;
 	height: 40px;
 	line-height: 40px;
-	margin: 4px;
+	margin: 2px;
 	text-align: center;
 	font-size: 20px;
 	background: rgba(200, 0, 0, 0.5);
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .calendar-wrapper {
-	background: rgba(0, 107, 0, 0.2);
+	background: rgba(0, 0, 50, 0.2);
 	width: 600px;
-	min-height: 300px;
+	min-height: 250px;
 	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
 	overflow: auto;
-	-webkit-border-radius: 0px 0px 8px 8px;
-	-moz-border-radius: 0px 0px 8px 8px;
-	border-radius: 0px 0px 8px 8px;
+	-webkit-border-radius: 0px 0px 4px 4px;
+	-moz-border-radius: 0px 0px 4px 4px;
+	border-radius: 0px 0px 4px 4px;
 }
 
 .date {
 	float: left;
-	width: 77px;
+	width: 81px;
 	height: 40px;
 	line-height: 40px;
-	margin: 4px;
+	margin: 2px;
 	text-align: center;
 	font-size: 20px;
 	background: rgba(0, 107, 0, 0.2);
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	color: #EEEEEE;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.date-today {
+	float: left;
+	width: 79px;
+	height: 38px;
+	border: 1px solid white;
+	line-height: 40px;
+	margin: 2px;
+	text-align: center;
+	font-size: 30px;
+	background: rgba(0, 107, 0, 0.4);
+	color: white;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.date-empty {
+	float: left;
+	width: 81px;
+	height: 40px;
+	line-height: 40px;
+	margin: 2px;
+	text-align: center;
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
