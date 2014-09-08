@@ -39,22 +39,7 @@ div {
 	margin-bottom: 20px;
 }
 
-.title {
-	background: rgba(0, 0, 50, 0.3);
-	width: 600px;
-	height: 60px;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	line-height: 60px;
-	text-align: center;
-	font-size: 30px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius:	4px;
-	border-radius: 4px;
-}
-
-.controls {
+.title, .full-date, .controls {
 	background: rgba(0, 0, 50, 0.3);
 	width: 600px;
 	height: 55px;
@@ -67,6 +52,11 @@ div {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+}
+
+.title {
+	margin-top: 50px;
+	font-size: 30px;
 }
 
 #month, #year {
@@ -84,7 +74,23 @@ div {
 	border-radius: 4px;
 }
 
-.arrow-left, .arrow-right {
+#current_full_date {
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	height: 42px;
+	line-height: 42px;
+	margin: 0px;
+	text-align: center;
+	font-size: 20px;
+	background: rgba(50, 0, 0, 0.1);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.arrow-left, .arrow-right, #to_current_month {
 	display: inline-block;
 	vertical-align: middle;
 	width: 36px;

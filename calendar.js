@@ -2,7 +2,7 @@ var DATE_CELLS = [];
 var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
 	'November', 'December'];
 var DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-var NOW_YEAR, NOW_MONTH, NOW_DATE;
+var NOW_YEAR, NOW_MONTH, NOW_DAY, NOW_DATE;
 
 function clearDateCells(){
 	for (var i = 0; i < DATE_CELLS.length; i++){
@@ -87,6 +87,10 @@ function previousMonth(){
 	}
 }
 
+function currentMonth(){
+    fillInCalendar(NOW_YEAR, NOW_MONTH);
+}
+
 function nextYear(){
 	var yearCell = document.getElementById('year');
 	var monthCell = document.getElementById('month');
@@ -103,14 +107,22 @@ function previousYear(){
 	fillInCalendar(year - 1, month);
 }
 
+function fillInFullCurrentDateCell(){
+    var currentFullDateCell = document.getElementById('current_full_date');
+    currentFullDateCell.onclick = currentMonth;
+    currentFullDateCell.innerHTML = DAY_NAMES[NOW_DAY] + ', ' + MONTH_NAMES[NOW_MONTH] + ' ' + NOW_DATE + ', ' + NOW_YEAR;
+}
+
 function start(){
 	createDatesCells();
 	createDaysCells();
 	var date = new Date();
 	NOW_YEAR = date.getFullYear();
 	NOW_MONTH = date.getMonth();
+	NOW_DAY = date.getDay();
 	NOW_DATE = date.getDate();
 	fillInCalendar(NOW_YEAR, NOW_MONTH);
+	fillInFullCurrentDateCell();
 	var nextMonthButton = document.getElementById('month_forward');
 	nextMonthButton.onclick = nextMonth;
 	var previousMonthButton = document.getElementById('month_back');
@@ -119,6 +131,8 @@ function start(){
 	nextYearButton.onclick = nextYear;
 	var previousYearButton = document.getElementById('year_back');
 	previousYearButton.onclick = previousYear;
+	var currentMonthButton = document.getElementById('to_current_month');
+    currentMonthButton.onclick = currentMonth;
 }
 
 window.onload = start;
